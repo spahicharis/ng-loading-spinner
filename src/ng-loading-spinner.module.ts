@@ -4,14 +4,14 @@ import { NgLoadingSpinnerService } from './services';
 
 @NgModule({
   providers: [
-    NgLoadingSpinner,
+    NgLoadingSpinnerService,
   ],
   declarations: [
-    NgLoadingSpinner,
+    NgLoadingSpinnerComponent,
   ],
   exports: [
-    NgLoadingSpinner,
+    NgLoadingSpinnerComponent,
   ]
 })
-export class NgLoadingSpinner {
+export class NgLoadingSpinnerModule {
 }
