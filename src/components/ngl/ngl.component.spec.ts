@@ -7,7 +7,7 @@ import {
 import { By } from '@angular/platform-browser';
 
 import { NgLoadingSpinnerService } from '../../';
-import { NgLoadingSpinnerComponent } from './ng-loading-spinner.component';
+import { NgLoadingSpinnerComponent } from './ngl.component';
 
 describe('NgLoadingSpinnerService', () => {
   const timeStringFormat = /[0-9]{2}:[0-9]{2}:[0-9]{2}/i;
@@ -35,7 +35,7 @@ describe('NgLoadingSpinnerService', () => {
     setInterval(() => {
       componentFixture.detectChanges();
 
-      const tickTockPageElement = componentFixture.debugElement.queryAll(By.css('.ng-loading-spinner-time'));
+      const tickTockPageElement = componentFixture.debugElement.queryAll(By.css('.ngl-time'));
       const displayedTimeText = tickTockPageElement[0].nativeElement.innerText;
 
       expect(tickTockPageElement).toBeDefined();

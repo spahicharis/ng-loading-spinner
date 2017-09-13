@@ -4,8 +4,8 @@ import { NgLoadingSpinnerService } from '../../services';
 
 @Component({
   selector: 'tick-tock',
-  styleUrls: ['./ng-loading-spinner.component.scss'],
-  templateUrl: './ng-loading-spinner.component.html',
+  styleUrls: ['./ngl.component.scss'],
+  templateUrl: './ngl.component.html',
 })
 export class NgLoadingSpinnerComponent implements OnInit {
   // Current time string.

@@ -1,1 +1,1 @@
-export * from './ng-loading-spinner';
+export * from './ngl';
