@@ -6,7 +6,7 @@ import {
 
 import { By } from '@angular/platform-browser';
 
-import { NgLoadingSpinnerService } from '../../';
+import { NgLoadingSpinnerModule } from '../../';
 import { NgLoadingSpinnerComponent } from './ngl.component';
 
 describe('NgLoadingSpinnerService', () => {
@@ -18,7 +18,7 @@ describe('NgLoadingSpinnerService', () => {
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        imports: [ NgLoadingSpinnerComponent ]
+        imports: [ NgLoadingSpinnerModule ]
       }).compileComponents().then(() => { /* Don't do anything */ });
     })
   );
@@ -35,7 +35,8 @@ describe('NgLoadingSpinnerService', () => {
     setInterval(() => {
       componentFixture.detectChanges();
 
-      const tickTockPageElement = componentFixture.debugElement.queryAll(By.css('.ngl-time'));
+      const tickTockPageElement = componentFixture.debugElement
+        .queryAll(By.css('.ng-loading-spinner'));
       const displayedTimeText = tickTockPageElement[0].nativeElement.innerText;
 
       expect(tickTockPageElement).toBeDefined();

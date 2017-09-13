@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgLoadingSpinnerService } from '../../services';
 
 @Component({
-  selector: 'tick-tock',
+  selector: 'ng-loading-spinner',
   styleUrls: ['./ngl.component.scss'],
   templateUrl: './ngl.component.html',
 })
