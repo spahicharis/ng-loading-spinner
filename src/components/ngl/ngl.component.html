@@ -1,8 +1,3 @@
-<!--<div class="ng-loading-spinner" *ngIf="progress.state.show | async">-->
-  <!--MOJA KOMPONENTA-->
-
-<!--</div>-->
-<!--<p>PRogress: {{progress.state.show |async }}</p>-->
-
-
-<ng-loading-spinner-base [state]="progress.state | async"></ng-loading-spinner-base>
+<div [hidden]="!show" id="loading-bar-spinner">
+  <div class="spinner-icon"></div>
+</div>

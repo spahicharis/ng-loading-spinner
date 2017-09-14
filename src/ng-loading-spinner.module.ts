@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NgLoadingSpinnerComponent, NgLoadingSpinnerBaseComponent } from './components';
+import { NgLoadingSpinnerComponent } from './components';
 import { NgLoadingSpinnerService } from './services';
 import {CommonModule} from "@angular/common";
 
@@ -11,8 +11,7 @@ import {CommonModule} from "@angular/common";
     NgLoadingSpinnerService,
   ],
   declarations: [
-    NgLoadingSpinnerComponent,
-    NgLoadingSpinnerBaseComponent
+    NgLoadingSpinnerComponent
   ],
   exports: [
     NgLoadingSpinnerComponent

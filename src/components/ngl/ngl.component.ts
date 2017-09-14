@@ -1,14 +1,15 @@
 import {ChangeDetectionStrategy, Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
 
 import { NgLoadingSpinnerService } from '../../services';
+import {Subject} from 'rxjs/Subject';
 
 @Component({
   selector: 'ng-loading-spinner',
   styleUrls: ['./ngl.component.scss'],
-  templateUrl: './ngl.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  templateUrl: './ngl.component.html'
 })
-export class NgLoadingSpinnerComponent implements OnChanges, OnDestroy {
+export class NgLoadingSpinnerComponent implements OnInit, OnDestroy {
+  public show: boolean;
   /**
    * Component constructor with injected dependencies.
    * @param progress
@@ -18,17 +19,16 @@ export class NgLoadingSpinnerComponent implements OnChanges, OnDestroy {
   ) {
 
     this.progress.state.subscribe(
-      response => {
-        console.log("SPINNER CONSTRUCT", response );
+      (response: boolean) => {
+        this.show = response;
       }
-    )
+    );
   }
 
-  ngOnChanges(changes: SimpleChanges){
-    console.log("CHAGNES,",changes);
-  }
+  public ngOnInit(){
 
-  ngOnDestroy() {
+  }
+  public ngOnDestroy() {
     this.progress.state.unsubscribe();
   }
 }

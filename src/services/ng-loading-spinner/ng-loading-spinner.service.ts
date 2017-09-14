@@ -10,26 +10,28 @@ export class NgLoadingSpinnerService {
 
   /** Progress state */
   state = new Subject();
+  private _isSpinning: boolean = false;
 
   constructor() {
 
-    console.log("SPINNER SERVICE CONSTRUCTOR");
   }
 
   /** Start spinning*/
   start() {
-    console.log("SPINNER SERVICE START");
-    this.state.next({
-      show: true
-    });
+    if(this.isSpinning()) return;
+    this._isSpinning = true;
+    this.state.next(true);
   }
 
   /** Stop spinning */
   stop() {
-    console.log("SPINNER SERVICE STOP");
-    /** if started complete the progress */
-    this.state.next({
-      show: false
-    });
+    if(!this.isSpinning()) return;
+    this._isSpinning = false;
+    /** if spinning stop it */
+    this.state.next(false);
+  }
+
+  public isSpinning() {
+    return this._isSpinning;
   }
 }

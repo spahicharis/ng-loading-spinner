@@ -3,7 +3,7 @@ import {DummyService} from "./dummy.service";
 
 @Component({
   selector: 'my-app',
-  template: `Evo <ng-loading-spinner></ng-loading-spinner>`
+  template: `Evo  <ng-loading-spinner></ng-loading-spinner>`
 })
 export class AppComponent implements OnInit{
   public header: string = 'UMD Demo';

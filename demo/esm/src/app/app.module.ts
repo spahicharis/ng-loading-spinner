@@ -10,8 +10,11 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
   imports: [ HttpClientModule, BrowserModule, NgLoadingSpinnerModule ],
   declarations: [ AppComponent ],
   bootstrap: [ AppComponent ],
-  providers:[DummyService,
-    { provide: HTTP_INTERCEPTORS, useClass: NgLoadingSpinnerInterceptor, multi: true }]
+  providers:
+    [
+    { provide: HTTP_INTERCEPTORS, useClass: NgLoadingSpinnerInterceptor, multi: true },
+    DummyService
+  ]
 })
 export class AppModule {
 }
