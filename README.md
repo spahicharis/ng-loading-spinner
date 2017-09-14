@@ -11,7 +11,7 @@
 Import `NgLoadingSpinnerModule` in the root module
 
 ```ts
-import { NgLoadingSpinnerModule, NgLoadingSpinnerInterceptor } from 'ngx-progressbar';
+import { NgLoadingSpinnerModule, NgLoadingSpinnerInterceptor } from 'ng-loading-spinner';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
