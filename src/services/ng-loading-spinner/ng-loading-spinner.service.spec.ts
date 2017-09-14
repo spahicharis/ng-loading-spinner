@@ -1,13 +1,15 @@
 import { NgLoadingSpinnerService } from './ng-loading-spinner.service';
 
 describe('NgLoadingSpinnerService', () => {
-  // let tickTockService: NgLoadingSpinnerService;
+  let tickTockService: NgLoadingSpinnerService;
 
   beforeEach(() => {
-    // tickTockService = new NgLoadingSpinnerService();
+    tickTockService = new NgLoadingSpinnerService();
   });
 
   it('should return observable with time string', (done) => {
+
+    done();
     // const timeStringFormat = /[0-9]{2}:[0-9]{2}:[0-9]{2}/i;
     //
     // tickTockService.getTick().subscribe(
