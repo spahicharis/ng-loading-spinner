@@ -1,11 +1,12 @@
-# `ng-loading-spinner` - Simple loading spinner for Angular 4.3.x
+# `ng-loading-spinner` 
+# - Simple loading spinner for Angular 4.3.x
 
-#Screen
-![alt text](https://github.com/spahicharis/ng-loading-spinner/ng-loading-spinner.png)
-#Installation
+# Screen
+![Loading spinner](https://github.com/spahicharis/ng-loading-spinner/blob/master/ng-loading-spinner.png)
+# Installation
 `npm install ng-loading-spinner --save`
 
-#Usage
+# Usage
 
 Import `NgLoadingSpinnerModule` in the root module
 
@@ -33,5 +34,5 @@ And just put the component in the template
  <ng-loading-spinner></ng-loading-spinner>
 ```
 
-#Licence
+# Licence
 (TODO)
