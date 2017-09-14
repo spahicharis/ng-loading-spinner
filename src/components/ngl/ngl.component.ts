@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
 
 import { NgLoadingSpinnerService } from '../../services';
 
@@ -6,25 +6,29 @@ import { NgLoadingSpinnerService } from '../../services';
   selector: 'ng-loading-spinner',
   styleUrls: ['./ngl.component.scss'],
   templateUrl: './ngl.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NgLoadingSpinnerComponent implements OnInit {
-  // Current time string.
-  public currentTime: string;
-
+export class NgLoadingSpinnerComponent implements OnChanges, OnDestroy {
   /**
    * Component constructor with injected dependencies.
-   * @param tickTockService
+   * @param progress
    */
   public constructor(
-    private tickTockService: NgLoadingSpinnerService
-  ) {}
+    private progress: NgLoadingSpinnerService
+  ) {
 
-  /**
-   * Implements onInit event handler.
-   */
-  public ngOnInit(): void {
-    this.tickTockService.getTick().subscribe(
-      (timeString) => this.currentTime = timeString
-    );
+    this.progress.state.subscribe(
+      response => {
+        console.log("SPINNER CONSTRUCT", response );
+      }
+    )
+  }
+
+  ngOnChanges(changes: SimpleChanges){
+    console.log("CHAGNES,",changes);
+  }
+
+  ngOnDestroy() {
+    this.progress.state.unsubscribe();
   }
 }

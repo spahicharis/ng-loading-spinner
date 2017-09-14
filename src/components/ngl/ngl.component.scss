@@ -2,6 +2,9 @@
 
 // Timer styles.
 .ng-loading-spinner {
+  z-index: 999999;
+  pointer-events: none;
+  position: relative;
   font-size: 2em;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }

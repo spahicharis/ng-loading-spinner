@@ -1,49 +1,35 @@
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Rx';
+import {Injectable} from '@angular/core';
+import {Subject} from 'rxjs/Subject';
 
 /**
  * NgLoadingSpinnerService class.
  */
+
 @Injectable()
 export class NgLoadingSpinnerService {
 
-  /**
-   * Extend time value with zero if required.
-   * @param value
-   * @returns {string}
-   */
-  private static formatTimeNumber(value: number): string {
-    const stringValue = value.toString();
-    return ('0' + stringValue).slice(-2);
+  /** Progress state */
+  state = new Subject();
+
+  constructor() {
+
+    console.log("SPINNER SERVICE CONSTRUCTOR");
   }
 
-  /**
-   * Get current time string.
-   * @returns {string}
-   */
-  private static getNowString(): string {
-    const date = new Date();
-
-    const hours = NgLoadingSpinnerService.formatTimeNumber(date.getHours());
-    const minutes = NgLoadingSpinnerService.formatTimeNumber(date.getMinutes());
-    const seconds = NgLoadingSpinnerService.formatTimeNumber(date.getSeconds());
-
-    return `${hours}:${minutes}:${seconds}`;
+  /** Start spinning*/
+  start() {
+    console.log("SPINNER SERVICE START");
+    this.state.next({
+      show: true
+    });
   }
 
-  /**
-   * Set up timer frequency.
-   * @type {number}
-   */
-  private readonly TIMEOUT: number = 1000;
-
-  /**
-   * Get current time observable.
-   * @returns Observable<string>
-   */
-  public getTick(): Observable<string> {
-    return Observable
-      .timer(0, this.TIMEOUT)
-      .map((tick) => NgLoadingSpinnerService.getNowString());
+  /** Stop spinning */
+  stop() {
+    console.log("SPINNER SERVICE STOP");
+    /** if started complete the progress */
+    this.state.next({
+      show: false
+    });
   }
 }
