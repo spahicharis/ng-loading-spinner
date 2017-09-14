@@ -1,7 +1,7 @@
 import { NgLoadingSpinnerService } from './ng-loading-spinner.service';
 
 describe('NgLoadingSpinnerService', () => {
-  let tickTockService: NgLoadingSpinnerService;
+  // let tickTockService: NgLoadingSpinnerService;
 
   beforeEach(() => {
     // tickTockService = new NgLoadingSpinnerService();

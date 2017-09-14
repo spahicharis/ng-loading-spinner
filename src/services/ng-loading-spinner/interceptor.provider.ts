@@ -7,17 +7,18 @@ import 'rxjs/add/operator/finally';
 @Injectable()
 export class NgLoadingSpinnerInterceptor implements HttpInterceptor {
 
-  requestCounter: number = 0;
+  private requestCounter: number = 0;
   constructor(public spinnerService: NgLoadingSpinnerService) {
   }
 
-  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+  public intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     this.spinnerService.start();
     this.requestCounter++;
     return next.handle(req).finally(() => {
       this.requestCounter--;
-      if(this.requestCounter === 0)
+      if (this.requestCounter === 0) {
         this.spinnerService.stop();
+      }
     });
   }
 }

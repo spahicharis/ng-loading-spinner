@@ -9,23 +9,23 @@ import {Subject} from 'rxjs/Subject';
 export class NgLoadingSpinnerService {
 
   /** Progress state */
-  state = new Subject();
+  public state = new Subject();
   private _isSpinning: boolean = false;
 
-  constructor() {
-
-  }
-
-  /** Start spinning*/
-  start() {
-    if(this.isSpinning()) return;
+  /** Start spinning */
+  public start() {
+    if (this.isSpinning()) {
+      return;
+    }
     this._isSpinning = true;
     this.state.next(true);
   }
 
   /** Stop spinning */
-  stop() {
-    if(!this.isSpinning()) return;
+  public stop() {
+    if (!this.isSpinning()) {
+      return;
+    }
     this._isSpinning = false;
     /** if spinning stop it */
     this.state.next(false);
