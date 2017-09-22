@@ -1,6 +1,6 @@
 {
   "name": "ng-loading-spinner",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Spaha loading spinner",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.js",
