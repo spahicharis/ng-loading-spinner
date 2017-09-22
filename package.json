@@ -14,14 +14,14 @@
     "aot-compilation",
     "library",
     "ng",
-    "seed",
-    "starter",
-    "tick-tock",
+    "loading",
+    "spinner",
+    "ng-loading-spinner",
     "typescript"
   ],
   "author": {
     "name": "Haris Spahic",
-    "url": "https://www.linkedin.com/in/trekhleb/"
+    "url": "https://www.linkedin.com/in/haris-spahic-438036a4/"
   },
   "repository": {
     "type": "git",
