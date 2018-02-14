@@ -1,8 +1,8 @@
 # `ng-loading-spinner` 
-# - Simple loading spinner for Angular 4.3.x
+# Simple loading spinner for Angular (>= 4.3.x)
 
 # Screen
-![Loading spinner](https://github.com/spahicharis/ng-loading-spinner/blob/master/ng-loading-spinner.png)
+![Loading spinner](https://raw.githubusercontent.com/spahicharis/ng-loading-spinner/master/ng-loading-spinner.png)
 # Installation
 `npm install ng-loading-spinner --save`
 
