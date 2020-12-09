@@ -2,7 +2,13 @@
   "name": "ng-loading-spinner",
   "version": "2.0.0",
   "peerDependencies": {
-    "@angular/common": "^7.2.0",
-    "@angular/core": "^7.2.0"
+    "@angular/common": "^11.0.3",
+    "@angular/core": "^11.0.3",
+    "rxjs": "^6.6.3"
+  },
+  "dependencies": {
+    "@angular/common": "^11.0.3",
+    "@angular/core": "^11.0.3",
+    "rxjs": "^6.6.3"
   }
 }
