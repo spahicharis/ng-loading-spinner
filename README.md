@@ -2,9 +2,6 @@
 
 # Simple loading spinner for Angular (>= 7.x) (Not tested on lower versions but should work fine)
 
-# Screen
-![Example spinner](https://raw.githubusercontent.com/spahicharis/spaha-workspace/master/src/assets/ng_loading_spinner.png)
-
 # Installation
 `npm install ng-loading-spinner --save`
 
