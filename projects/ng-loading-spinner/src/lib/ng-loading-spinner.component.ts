@@ -8,7 +8,7 @@ import { NgLoadingSpinnerService } from './ng-loading-spinner.service';
       <div [style.borderColor]="color" class="spinner-icon"></div>
     </div>
   `,
-  styleUrls: ['./ngx-loading-spinner.component.scss']
+  styleUrls: ['./ng-loading-spinner.component.scss']
 })
 export class NgLoadingSpinnerComponent implements OnInit {
 

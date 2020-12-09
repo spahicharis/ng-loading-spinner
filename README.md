@@ -1,6 +1,7 @@
 # NgLoadingSpinner
 
-# Simple loading spinner for Angular (>= 7.x) (Not tested on lower versions but should work fine)
+# Simple loading spinner for Angular (>= 7.x) 
+## (Not tested on lower versions but should work fine)
 
 # Installation
 `npm install ng-loading-spinner --save`
@@ -28,7 +29,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 And just put the component in root html
 
 ```html
- <ngx-loading-spinner top="100" color="red"></ngx-loading-spinner>
+ <ng-loading-spinner top="100" color="red"></ng-loading-spinner>
 ```
 
 # Funding
