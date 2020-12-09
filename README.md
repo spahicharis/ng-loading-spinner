@@ -1,27 +1,35 @@
-# NgLoadingSpinnerWorkspace
+# NgLoadingSpinner
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+# Simple loading spinner for Angular (>= 7.x) (Not tested on lower versions but should work fine)
 
-## Development server
+# Installation
+`npm install ng-loading-spinner --save`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Usage
+Import `NgLoadingSpinnerModule` in the root module
+```ts
+import { NgLoadingSpinnerModule, NgLoadingSpinnerInterceptor } from 'ng-loading-spinner';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-## Code scaffolding
+@NgModule({
+  providers: [
+    // ...
+    { provide: HTTP_INTERCEPTORS, useClass: NgLoadingSpinnerInterceptor, multi: true }
+  ],
+  imports: [
+    // ...
+    HttpClientModule,
+    NgLoadingSpinnerModule,
+    // ...
+  ]
+})
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+And just put the component in root html
 
-## Build
+```html
+ <ngx-loading-spinner top="100" color="red"></ngx-loading-spinner>
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Funding
+[Paypal.me](https://paypal.me/harespaha) 
