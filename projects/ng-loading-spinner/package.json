@@ -1,0 +1,12 @@
+{
+  "name": "ng-loading-spinner",
+  "version": "2.0.2",
+  "peerDependencies": {
+    "@angular/common": "^11.0.3",
+    "@angular/core": "^11.0.3",
+    "rxjs": "^6.6.3"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
