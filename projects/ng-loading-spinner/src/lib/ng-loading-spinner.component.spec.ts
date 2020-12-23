@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { NgLoadingSpinnerComponent } from './ng-loading-spinner.component';
+import {NgLoadingSpinnerComponent} from './ng-loading-spinner.component';
 
 describe('NgxLoadingSpinnerComponent', () => {
   let component: NgLoadingSpinnerComponent;
@@ -8,9 +8,9 @@ describe('NgxLoadingSpinnerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgLoadingSpinnerComponent ]
+      declarations: [NgLoadingSpinnerComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
