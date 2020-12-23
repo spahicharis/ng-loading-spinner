@@ -1,11 +1,22 @@
 {
   "name": "ng-loading-spinner",
-  "version": "2.0.4",
+  "version": "2.0.6",
   "peerDependencies": {
     "@angular/common": "^10.2.0",
     "@angular/core": "^10.2.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
-  }
+  },
+  "keywords": [
+    "spinner",
+    "loading",
+    "Angular",
+    "ng",
+    "ngx",
+    "busy",
+    "wait",
+    "Angular loading spinner",
+    "ng-loading-spinner"
+  ]
 }
