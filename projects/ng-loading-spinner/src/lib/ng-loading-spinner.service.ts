@@ -1,37 +1,38 @@
-import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {Subject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NgLoadingSpinnerService {
 
-  constructor() { }
+  constructor() {
+  }
 
-   /** Progress state */
-   public state = new Subject();
-   private _isSpinning: boolean = false;
- 
-   /** Start spinning */
-   public start() {
-     if (this.isSpinning()) {
-       return;
-     }
-     this._isSpinning = true;
-     this.state.next(true);
-   }
- 
-   /** Stop spinning */
-   public stop() {
-     if (!this.isSpinning()) {
-       return;
-     }
-     this._isSpinning = false;
-     /** if spinning stop it */
-     this.state.next(false);
-   }
- 
-   public isSpinning() {
-     return this._isSpinning;
-   }
+  /** Progress state */
+  state = new Subject();
+  private isSpinning1 = false;
+
+  /** Start spinning */
+  start(): void {
+    if (this.isSpinning()) {
+      return;
+    }
+    this.isSpinning1 = true;
+    this.state.next(true);
+  }
+
+  /** Stop spinning */
+  stop(): void {
+    if (!this.isSpinning()) {
+      return;
+    }
+    this.isSpinning1 = false;
+    /** if spinning stop it */
+    this.state.next(false);
+  }
+
+  isSpinning(): boolean {
+    return this.isSpinning1;
+  }
 }

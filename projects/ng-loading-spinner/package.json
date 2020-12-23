@@ -1,6 +1,6 @@
 {
   "name": "ng-loading-spinner",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "peerDependencies": {
     "@angular/common": "^10.2.0",
     "@angular/core": "^10.2.0"

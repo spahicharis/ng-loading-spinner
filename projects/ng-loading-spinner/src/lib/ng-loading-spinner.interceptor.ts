@@ -1,13 +1,14 @@
-import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { finalize } from 'rxjs/operators';
-import { NgLoadingSpinnerService } from './ng-loading-spinner.service';
+import {HttpInterceptor, HttpRequest, HttpHandler, HttpEvent} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs';
+import {finalize} from 'rxjs/operators';
+import {NgLoadingSpinnerService} from './ng-loading-spinner.service';
 
 @Injectable()
 export class NgLoadingSpinnerInterceptor implements HttpInterceptor {
 
-  private requestCounter: number = 0;
+  private requestCounter = 0;
+
   constructor(public spinnerService: NgLoadingSpinnerService) {
   }
 

@@ -1,24 +1,42 @@
-# NgLoadingSpinner
-
+# Simple loading spinner for Angular (>= 7.x)
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
-## Code scaffolding
+# Installation
+`npm install ng-loading-spinner --save`
 
-Run `ng generate component component-name --project ng-loading-spinner` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-loading-spinner`.
-> Note: Don't forget to add `--project ng-loading-spinner` or else it will be added to the default project in your `angular.json` file. 
+# Screenshot
+![Screenshot](Screenshot.png)
 
-## Build
+# Usage
+Import `NgLoadingSpinnerModule` in the root module
+```ts
+import { NgLoadingSpinnerModule, NgLoadingSpinnerInterceptor } from 'ng-loading-spinner';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-Run `ng build ng-loading-spinner` to build the project. The build artifacts will be stored in the `dist/` directory.
+@NgModule({
+  providers: [
+    // ...
+    { provide: HTTP_INTERCEPTORS, useClass: NgLoadingSpinnerInterceptor, multi: true }
+  ],
+  imports: [
+    // ...
+    HttpClientModule,
+    NgLoadingSpinnerModule,
+    // ...
+  ]
+})
+```
 
-## Publishing
+And just put the component in root html
 
-After building your library with `ng build ng-loading-spinner`, go to the dist folder `cd dist/ng-loading-spinner` and run `npm publish`.
+```html
+ <ng-loading-spinner top="100" color="green"></ng-loading-spinner>
+```
+## Customization
+Use top and color inputs for basic customization.
 
-## Running unit tests
+# Funding
+Buy me a cup of coffee. Thank you.
 
-Run `ng test ng-loading-spinner` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[Paypal.me](https://paypal.me/harespaha)
+--
